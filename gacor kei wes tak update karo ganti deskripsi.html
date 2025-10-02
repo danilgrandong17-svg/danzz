@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danz O'Conner - Produk Digital</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+    body { background:#0a0f1c; color:white; overflow-x:hidden; }
+
+    /* Background gradient */
+    .background {
+      position:fixed; top:0; left:0; width:100%; height:100%;
+      background: radial-gradient(circle, rgba(0,255,255,0.12) 0%, transparent 70%),
+                  radial-gradient(circle, rgba(0,119,255,0.12) 0%, transparent 70%);
+      background-size:400px 400px;
+      animation: moveBg 10s linear infinite alternate;
+      z-index:-3;
+    }
+    @keyframes moveBg {
+      0% { background-position:0 0,100% 100%; }
+      100% { background-position:100% 0,0 100%; }
+    }
+
+    /* Floating Icons */
+    .floating-icons {
+      position:fixed; top:0; left:0; width:100%; height:100%;
+      pointer-events:none; z-index:-2; overflow:hidden;
+    }
+    .icon {
+      position:absolute;
+      width:40px;
+      opacity:0.25;
+      animation: floatIcon linear infinite;
+    }
+    @keyframes floatIcon {
+      0%   { transform:translateY(120vh) rotate(0deg); opacity:0; }
+      20%  { opacity:0.4; }
+      50%  { opacity:0.7; }
+      80%  { opacity:0.4; }
+      100% { transform:translateY(-30vh) rotate(360deg); opacity:0; }
+    }
+
+    /* Header */
+    header { text-align:center; padding:60px 20px 30px; }
+    header h1 {
+      font-size:3rem; font-weight:bold;
+      text-shadow:0 0 15px cyan,0 0 30px #0077ff;
+      animation:glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow:0 0 10px cyan,0 0 20px #0077ff; }
+      to   { text-shadow:0 0 20px cyan,0 0 40px #00f7ff; }
+    }
+    header p { font-size:1.2rem; color:#b8dfff; margin-top:10px; }
+
+    /* Profile */
+    .profile {
+      text-align:center; margin:40px auto; max-width:700px;
+      padding:20px; background:rgba(255,255,255,0.05);
+      border-radius:15px; box-shadow:0 0 20px rgba(0,255,255,0.2);
+      animation:float 4s ease-in-out infinite;
+    }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+    .profile img { width:140px; height:140px; border-radius:50%; border:3px solid cyan; margin-bottom:15px; box-shadow:0 0 15px cyan; }
+    .profile h2 { font-size:2rem; margin-bottom:10px; color:cyan; }
+    .profile p { font-size:1rem; line-height:1.6; color:#d4eaff; }
+
+    /* Produk */
+    .produk { text-align:center; margin:60px auto; max-width:700px; padding:20px; background:rgba(255,255,255,0.05); border-radius:15px; box-shadow:0 0 20px rgba(0,255,255,0.2); }
+    .produk h3 { font-size:1.8rem; margin-bottom:20px; color:#00f7ff; }
+    .produk ul { list-style:none; padding:0; text-align:left; }
+    .produk ul li { font-size:1.1rem; margin:8px 0; color:#e0faff; }
+
+    /* Contact */
+    .contact { text-align:center; margin:60px auto; max-width:500px; }
+    .contact h3 { font-size:1.8rem; margin-bottom:25px; color:#00f7ff; }
+    .contact-card {
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(0,255,255,0.2);
+      border-radius:15px; margin:15px 0; padding:20px;
+      display:flex; align-items:center; justify-content:flex-start;
+      transition:.3s; cursor:pointer;
+      box-shadow:0 0 15px rgba(0,255,255,0.15);
+    }
+    .contact-card:hover { transform:translateX(10px) scale(1.02); box-shadow:0 0 25px cyan,0 0 50px #0077ff; background:rgba(0,255,255,0.1); }
+    .contact-card img { width:40px; height:40px; margin-right:15px; }
+    .contact-card span { font-size:1.2rem; font-weight:bold; color:#e0faff; }
+
+    footer { text-align:center; padding:20px; font-size:0.9rem; color:#a3cfff; }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+
+  <!-- Floating App Icons -->
+  <div class="floating-icons">
+    <!-- contoh 10 icon, bisa tambah sampai 30 -->
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111628.png" class="icon" style="left:5%; top:20%; animation-duration:22s; animation-delay:0s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384055.png" class="icon" style="left:15%; top:60%; animation-duration:18s; animation-delay:3s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" class="icon" style="left:25%; top:10%; animation-duration:25s; animation-delay:6s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="icon" style="left:35%; top:70%; animation-duration:20s; animation-delay:9s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" class="icon" style="left:45%; top:30%; animation-duration:24s; animation-delay:1s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="icon" style="left:55%; top:80%; animation-duration:19s; animation-delay:4s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111670.png" class="icon" style="left:65%; top:40%; animation-duration:27s; animation-delay:7s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="icon" style="left:75%; top:15%; animation-duration:21s; animation-delay:10s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" class="icon" style="left:85%; top:55%; animation-duration:23s; animation-delay:2s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" class="icon" style="left:95%; top:35%; animation-duration:26s; animation-delay:5s;">
+  </div>
+
+  <header>
+    <h1>Danz O'Conner</h1>
+    <p>Solusi Produk Digital & APK Premium All Murah</p>
+  </header>
+
+  <section class="profile">
+    <img src="https://i.ibb.co/2tR8d5s/avatar.png" alt="Profile">
+    <h2>About Me</h2>
+    <p>
+      Halo! Saya <b>Danz O'Conner</b>, 
+      Saya menyediakan layanan dan produk digital terpercaya, mencakup aksesoris, aplikasi premium, merchandise komunitas, buku, top-up & item game (MLBB/Roblox), jastip iPhone, payment, sewa bot, serta layanan optimasi sosial media. Semua dengan transaksi aman, praktis, dan harga terjangkau.
+    </p>
+  </section>
+
+  <section class="produk">
+    <h3>Produk & Layanan</h3>
+    <ul>
+      <li>⠻̸𖠌 aksesoris</li>
+      <li>⠻̸𖠌 aplikasi premium</li>
+      <li>⠻̸𖠌 baju komunitas</li>
+      <li>⠻̸𖠌 buku</li>
+      <li>⠻̸𖠌 diamond mlbb</li>
+      <li>⠻̸𖠌 gift item mlbb</li>
+      <li>⠻̸𖠌 jastip iphone</li>
+      <li>⠻̸𖠌 payment</li>
+      <li>⠻̸𖠌 po skin mlbb</li>
+      <li>⠻̸𖠌 sewa bot</li>
+      <li>⠻̸𖠌 suntik sosmed</li>
+      <li>⠻̸𖠌 vilog roblox</li>
+      <li>⠻̸𖠌 weekly diamond pass</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h3>Hubungi Saya</h3>
+    <a href="https://wa.me/6287766273620" target="_blank" class="contact-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      <span>WhatsApp</span>
+    </a>
+    <a href="https://t.me/Faisalkzl" target="_blank" class="contact-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+      <span>Telegram</span>
+    </a>
+    <a href="https://www.instagram.com/sc_darsick" target="_blank" class="contact-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      <span>Instagram</span>
+    </a>
+    <a href="https://chat.whatsapp.com/ISoW9bDF7Do8gbDQHdvOOC" target="_blank" class="contact-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Group">
+      <span>Grup WhatsApp</span>
+    </a>
+  </section>
+
+  <footer>© 2025 Danz O'Conner | Produk Digital Murah & Berkualitas</footer>
+</body>
+</html>
